@@ -4,7 +4,7 @@
 #
 
 app = "rust-docker"
-primary_region = "sin"
+primary_region = "bom"
 
 [http_service]
   internal_port = 8080
@@ -23,7 +23,7 @@ primary_region = "sin"
     method = "get"
     path = "/healthcheck"
     port = 8080
-    timeout = "1s"
+    timeout = "5s"
     type = "http"
     # [checks.name_of_your_http_check.headers]
     #   Content-Type = "application/json"
