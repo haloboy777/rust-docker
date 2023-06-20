@@ -17,10 +17,9 @@ RUN cargo build --release
 
 # Copy the binary into a new container for a smaller docker image
 FROM debian:stable-slim
-COPY --from=build /tmp/main/target/release/actix /executor
+COPY --from=build /tmp/main/target/release/rust-docker /executor
 USER root
 
-RUN ls -alh
 ENV RUST_LOG=info
 ENV RUST_BACKTRACE=full
 EXPOSE 8080
