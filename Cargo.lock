@@ -839,6 +839,7 @@ version = "0.1.0"
 dependencies = [
  "actix-web",
  "log",
+ "serde_json",
  "simple_logger",
 ]
 
