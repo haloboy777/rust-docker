@@ -1,12 +1,4 @@
-# Base image extends debian:buster-slim
-FROM rust:slim-bookworm as build
-
-# Init Repo for building dependencies and caching them for later use
-WORKDIR /tmp
-RUN cargo init --vcs none main
-COPY Cargo.toml ./main
-WORKDIR /tmp/main
-RUN cargo build --release
+FROM haloboy777/rust-cache-layer:actix as build
 
 # Compile main
 RUN rm -rf /tmp/main/src/

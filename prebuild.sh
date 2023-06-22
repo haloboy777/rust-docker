@@ -1,0 +1,1 @@
+docker buildx build --platform linux/amd64,linux/arm64 -t haloboy777/rust-cache-layer:actix -f Dockerfile.buildcache --push .
